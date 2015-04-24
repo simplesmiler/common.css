@@ -1,0 +1,20 @@
+{
+  "name": "common.css",
+  "version": "1.0.0",
+  "main": "./dist/uncommon.css",
+  "keywords": [
+    "css"
+  ],
+  "authors": [
+    "Denis Karabaza <denis.karabaza@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/simplesmiler/common.css",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
