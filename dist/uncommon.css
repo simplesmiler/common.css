@@ -27,6 +27,35 @@ ul.plain {
 
 
 
+/* @SECTION: flex */
+
+.fx-row { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; }
+.fx-col { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
+.fx-wrap { -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; } /* @NOTE: nowrap is default */
+
+.fx-auto { -webkit-box-flex: 1; -webkit-flex: 1 1 auto; -ms-flex: 1 1 auto; flex: 1 1 auto; }
+.fx-grow { -webkit-box-flex: 1; -webkit-flex: 1 0 auto; -ms-flex: 1 0 auto; flex: 1 0 auto; }
+.fx-none { -webkit-box-flex: 0; -webkit-flex: none; -ms-flex: none; flex: none; }
+
+/* @NOTE: primary axis */
+.fx-pstart    { -webkit-box-pack: start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; }
+.fx-pcenter   { -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
+.fx-pstretch  { -webkit-box-pack: stretch; -webkit-justify-content: stretch; -ms-flex-pack: stretch; justify-content: stretch; }
+.fx-pbetween  { -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
+.fx-paround   { -webkit-justify-content: space-around; -ms-flex-pack: distribute; justify-content: space-around; }
+.fx-pend      { -webkit-box-pack: end; -webkit-justify-content: flex-end; -ms-flex-pack: end; justify-content: flex-end; }
+
+/* @NOTE: secondary axis */
+.fx-scenter   { -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+.fx-sbaseline { -webkit-box-align: baseline; -webkit-align-items: baseline; -ms-flex-align: baseline; align-items: baseline; }
+.fx-sstretch  { -webkit-box-align: stretch; -webkit-align-items: stretch; -ms-flex-align: stretch; align-items: stretch; }
+.fx-sstart    { -webkit-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; }
+.fx-send      { -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; }
+
+.fx-center { -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
+
+
+
 /* @SECTION: layout */
 
 .b { display: block; }
@@ -59,14 +88,21 @@ ul.plain {
 
 /* @SECTION: interactive */
 
-.cur-pointer { cursor: pointer; }
 .cur-default { cursor: default; }
+.cur-pointer { cursor: pointer; }
+.cur-grab    { cursor: -webkit-grab; cursor: grab; }
 
-.no-select { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
-.yes-select { -webkit-user-select: auto; -moz-user-select: auto; -ms-user-select: auto; user-select: auto; }
+.no-select { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; } /* @DEPRECATED: use `select-none` instead */
+.yes-select { -webkit-user-select: auto; -moz-user-select: auto; -ms-user-select: auto; user-select: auto; } /* @DEPRECATED: use `select-auto` instead */
 
-.no-mouse { pointer-events: none; }
-.yes-mouse { pointer-events: auto; }
+.select-none { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.select-auto { -webkit-user-select: auto; -moz-user-select: auto; -ms-user-select: auto; user-select: auto; }
+
+.no-mouse { pointer-events: none; } /* @DEPRECATED: use `mouse-none` instead */
+.yes-mouse { pointer-events: auto; } /* @DEPRECATED: use `mouse-auto` instead */
+
+.mouse-none { pointer-events: none; }
+.mouse-auto { pointer-events: auto; }
 
 
 
@@ -76,6 +112,7 @@ ul.plain {
 .fw-normal { font-weight: normal; }
 
 .td-underline { text-decoration: underline; }
+.td-through { text-decoration: line-through; }
 .td-none { text-decoration: underline; }
 
 .tt-upper { text-transform: uppercase; }
@@ -84,6 +121,8 @@ ul.plain {
 
 
 /* @SECTION: positional */
+
+.trbl { top: 0.0em; right: 0.0em; bottom: 0.0em; left: 0.0em; }
 
 .t00 { top: 0.0em; }
 .t05 { top: 0.5em; }
