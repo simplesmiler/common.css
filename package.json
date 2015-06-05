@@ -1,21 +1,20 @@
 {
-  "name": "common.css",
-  "version": "1.0.0",
+  "name": "uncommon.css",
+  "version": "1.1.0",
   "description": "In-house framework for common css thingies.",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/simplesmiler/common.css"
+    "url": "https://github.com/simplesmiler/uncommon.css"
   },
   "author": "Denis Karabaza <denis.karabaza@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/simplesmiler/common.css/issues"
+    "url": "https://github.com/simplesmiler/uncommon.css/issues"
   },
-  "homepage": "https://github.com/simplesmiler/common.css",
+  "homepage": "https://github.com/simplesmiler/uncommon.css",
   "keywords": [
     "css"
   ],

@@ -27,6 +27,35 @@ ul.plain {
 
 
 
+/* @SECTION: flex */
+
+.fx-row { display: flex; flex-direction: row; }
+.fx-col { display: flex; flex-direction: column; }
+.fx-wrap { flex-wrap: wrap; } /* @NOTE: nowrap is default */
+
+.fx-auto { flex: 1 1 auto; }
+.fx-grow { flex: 1 0 auto; }
+.fx-none { flex: none; }
+
+/* @NOTE: primary axis */
+.fx-pstart    { justify-content: flex-start; }
+.fx-pcenter   { justify-content: center; }
+.fx-pstretch  { justify-content: stretch; }
+.fx-pbetween  { justify-content: space-between; }
+.fx-paround   { justify-content: space-around; }
+.fx-pend      { justify-content: flex-end; }
+
+/* @NOTE: secondary axis */
+.fx-scenter   { align-items: center; }
+.fx-sbaseline { align-items: baseline; }
+.fx-sstretch  { align-items: stretch; }
+.fx-sstart    { align-items: flex-start; }
+.fx-send      { align-items: flex-end; }
+
+.fx-center { align-items: center; justify-content: center; }
+
+
+
 /* @SECTION: layout */
 
 .b { display: block; }
@@ -59,14 +88,21 @@ ul.plain {
 
 /* @SECTION: interactive */
 
-.cur-pointer { cursor: pointer; }
 .cur-default { cursor: default; }
+.cur-pointer { cursor: pointer; }
+.cur-grab    { cursor: grab; }
 
-.no-select { user-select: none; }
-.yes-select { user-select: auto; }
+.no-select { user-select: none; } /* @DEPRECATED: use `select-none` instead */
+.yes-select { user-select: auto; } /* @DEPRECATED: use `select-auto` instead */
 
-.no-mouse { pointer-events: none; }
-.yes-mouse { pointer-events: auto; }
+.select-none { user-select: none; }
+.select-auto { user-select: auto; }
+
+.no-mouse { pointer-events: none; } /* @DEPRECATED: use `mouse-none` instead */
+.yes-mouse { pointer-events: auto; } /* @DEPRECATED: use `mouse-auto` instead */
+
+.mouse-none { pointer-events: none; }
+.mouse-auto { pointer-events: auto; }
 
 
 
@@ -76,6 +112,7 @@ ul.plain {
 .fw-normal { font-weight: normal; }
 
 .td-underline { text-decoration: underline; }
+.td-through { text-decoration: line-through; }
 .td-none { text-decoration: underline; }
 
 .tt-upper { text-transform: uppercase; }
@@ -84,6 +121,8 @@ ul.plain {
 
 
 /* @SECTION: positional */
+
+.trbl { top: 0.0em; right: 0.0em; bottom: 0.0em; left: 0.0em; }
 
 .t00 { top: 0.0em; }
 .t05 { top: 0.5em; }
