@@ -63,6 +63,7 @@ ul.plain {
 .ib { display: inline-block; }
 
 .box { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.bfc { overflow: hidden; }
 
 .o-hidden { overflow: hidden; }
 .ox-hidden { overflow-x: hidden; }
@@ -89,7 +90,7 @@ ul.plain {
 
 
 
-/* @SECTION: interactive */
+/* @SECTION: user interaction */
 
 .cur-default { cursor: default; }
 .cur-pointer { cursor: pointer; }
@@ -122,6 +123,14 @@ ul.plain {
 .tt-upper { text-transform: uppercase; }
 .tt-none { text-transform: none; }
 
+
+
+/* @SECTION: backgrounds */
+
+.bg-none { background: none; }
+.bg-cover { background-position: center; -webkit-background-size: cover; background-size: cover; background-repeat: no-repeat; }
+.bg-contain { background-position: center; -webkit-background-size: contain; background-size: contain; background-repeat: no-repeat; }
+.bg-center { background-position: center; background-repeat: no-repeat; }
 
 
 /* @SECTION: special cases */
