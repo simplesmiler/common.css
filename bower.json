@@ -1,6 +1,5 @@
 {
   "name": "uncommon.css",
-  "version": "1.2.2",
   "main": "./dist/uncommon.css",
   "keywords": [
     "css"
